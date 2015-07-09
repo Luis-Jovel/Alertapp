@@ -62,8 +62,6 @@ namespace Alertapp
                 {3, BitmapDescriptorFactory.HueGreen},
                 {4, BitmapDescriptorFactory.HueYellow},
             };
-            toolBar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolBar);
             btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
             btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
             ibtnReload = FindViewById<ImageButton>(Resource.Id.ibtnReload);
@@ -78,8 +76,10 @@ namespace Alertapp
             ibtnGps.Click += ibtnGps_Click;
             ibtnSearch.Click += ibtnSearch_Click;
 
+            toolBar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawe_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            SetSupportActionBar(toolBar);
             mDrawerToggle = new MyActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
@@ -89,6 +89,7 @@ namespace Alertapp
             mDrawerLayout.SetDrawerListener(mDrawerToggle);
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(true);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             mDrawerToggle.SyncState();
             SetUpMap();
             InitializeLocationManager();
