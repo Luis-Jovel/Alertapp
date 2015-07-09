@@ -2,7 +2,7 @@ package md56f37930c7ff998cb67a2bd003cb8b93f;
 
 
 public class MainActivity
-	extends android.support.v7.app.AppCompatActivity
+	extends android.support.v7.app.ActionBarActivity
 	implements
 		mono.android.IGCUserPeer,
 		com.google.android.gms.maps.OnMapReadyCallback,
@@ -14,6 +14,7 @@ public class MainActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onPause:()V:GetOnPauseHandler\n" +
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
@@ -44,6 +45,14 @@ public class MainActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public boolean onOptionsItemSelected (android.view.MenuItem p0)
+	{
+		return n_onOptionsItemSelected (p0);
+	}
+
+	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
 
 
 	public void onResume ()

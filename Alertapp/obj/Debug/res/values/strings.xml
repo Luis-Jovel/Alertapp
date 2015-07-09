@@ -1,1 +1,1 @@
-<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">Alertapp</string><string name="google_maps_key">AIzaSyAz4rSkRz67wBN6fxoeDwF8lCcw1iP8PKU</string></resources>
+<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">Alertapp</string><string name="google_maps_key">AIzaSyAz4rSkRz67wBN6fxoeDwF8lCcw1iP8PKU</string><string name="openDrawer">Drawer Open</string><string name="closeDrawer">Drawer Closed</string></resources>

@@ -20,11 +20,12 @@ using Android.Net;
 using Android.Gms.Common;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V7.App;
+using Android.Support.V4.Widget;
 
 namespace Alertapp
 {
     [Activity(Label = "Alertapp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
-    public class MainActivity : AppCompatActivity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter, Android.Gms.Maps.GoogleMap.IOnInfoWindowClickListener, ILocationListener
+    public class MainActivity : ActionBarActivity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter, Android.Gms.Maps.GoogleMap.IOnInfoWindowClickListener, ILocationListener
     {
         private GoogleMap mMap;
         private Button btnNormal, btnSatellite;
@@ -42,7 +43,9 @@ namespace Alertapp
         private SupportToolbar toolBar;
         private Android.App.AlertDialog.Builder builder;
         private Android.App.AlertDialog alert;
-        
+        private MyActionBarDrawerToggle mDrawerToggle;
+        private DrawerLayout mDrawerLayout;
+        private ListView mLeftDrawer;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -74,6 +77,19 @@ namespace Alertapp
             ibtnReload.Click += ibtnReload_Click;
             ibtnGps.Click += ibtnGps_Click;
             ibtnSearch.Click += ibtnSearch_Click;
+
+            mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawe_layout);
+            mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            mDrawerToggle = new MyActionBarDrawerToggle(
+                this,
+                mDrawerLayout,
+                Resource.String.openDrawer,
+                Resource.String.closeDrawer
+            );
+            mDrawerLayout.SetDrawerListener(mDrawerToggle);
+            SupportActionBar.SetHomeButtonEnabled(true);
+            SupportActionBar.SetDisplayShowTitleEnabled(true);
+            mDrawerToggle.SyncState();
             SetUpMap();
             InitializeLocationManager();
             cliente = new WebClient();
@@ -112,6 +128,11 @@ namespace Alertapp
                     mMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(_currentLocation.Latitude, _currentLocation.Longitude), 10));
                 }
             }
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            mDrawerToggle.OnOptionsItemSelected(item);
+            return base.OnOptionsItemSelected(item);
         }
         protected override void OnResume()
         {

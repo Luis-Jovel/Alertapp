@@ -4039,6 +4039,9 @@ namespace Alertapp
 			// aapt resource value: 0x7f070003
 			public const int cast_notification_disconnect = 2131165187;
 			
+			// aapt resource value: 0x7f07004d
+			public const int closeDrawer = 2131165261;
+			
 			// aapt resource value: 0x7f070008
 			public const int common_android_wear_notification_needs_update_text = 2131165192;
 			
@@ -4179,6 +4182,9 @@ namespace Alertapp
 			
 			// aapt resource value: 0x7f070031
 			public const int mr_user_route_category_name = 2131165233;
+			
+			// aapt resource value: 0x7f07004c
+			public const int openDrawer = 2131165260;
 			
 			// aapt resource value: 0x7f070047
 			public const int status_bar_notification_info_overflow = 2131165255;

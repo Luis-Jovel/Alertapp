@@ -2316,6 +2316,7 @@ containing a value of this type.
         /**  Label of a button to disconnect an active cast display connection.  [CHAR LIMIT=25] NOTE: Same text as msgid="9024230238785261495" 
          */
         public static final int cast_notification_disconnect=0x7f070003;
+        public static final int closeDrawer=0x7f07004d;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f070008;
@@ -2443,6 +2444,7 @@ containing a value of this type.
         public static final int mr_media_route_controller_stop=0x7f070035;
         public static final int mr_system_route_name=0x7f070030;
         public static final int mr_user_route_category_name=0x7f070031;
+        public static final int openDrawer=0x7f07004c;
         public static final int status_bar_notification_info_overflow=0x7f070047;
         public static final int store_picture_message=0x7f070027;
         public static final int store_picture_title=0x7f070026;
