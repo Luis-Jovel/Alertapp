@@ -77,6 +77,7 @@ namespace Alertapp
             ibtnSearch.Click += ibtnSearch_Click;
 
             toolBar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
+            toolBar.SetTitleTextColor(Color.White);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawe_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
             SetSupportActionBar(toolBar);

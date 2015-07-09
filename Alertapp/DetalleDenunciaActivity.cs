@@ -13,7 +13,7 @@ using Android.Graphics;
 
 namespace Alertapp
 {
-    [Activity(Label = "DetalleDenuncia")]
+    [Activity(Label = "Detalles de Denuncia", Theme = "@style/MyTheme")]
     public class DetalleDenunciaActivity : Activity
     {
         private TextView txtvTipo, txtvAutor, txtvDescripcion, txtvPais, txtvCiudad, txtvCalle;

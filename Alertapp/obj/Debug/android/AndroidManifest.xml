@@ -6,8 +6,8 @@
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_key" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-    <activity android:label="CrearDenunciaActivity" android:theme="@android:style/Theme.Holo.Light" android:name="md56f37930c7ff998cb67a2bd003cb8b93f.CrearDenunciaActivity" />
-    <activity android:label="DetalleDenuncia" android:name="md56f37930c7ff998cb67a2bd003cb8b93f.DetalleDenunciaActivity" />
+    <activity android:label="Crear Denuncia" android:theme="@style/MyTheme" android:name="md56f37930c7ff998cb67a2bd003cb8b93f.CrearDenunciaActivity" />
+    <activity android:label="Detalles de Denuncia" android:theme="@style/MyTheme" android:name="md56f37930c7ff998cb67a2bd003cb8b93f.DetalleDenunciaActivity" />
     <activity android:icon="@drawable/icon" android:label="Alertapp" android:theme="@style/MyTheme" android:name="md56f37930c7ff998cb67a2bd003cb8b93f.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

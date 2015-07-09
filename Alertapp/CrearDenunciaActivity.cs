@@ -17,7 +17,7 @@ using Android.Graphics;
 
 namespace Alertapp
 {
-    [Activity(Label = "CrearDenunciaActivity", Theme = "@android:style/Theme.Holo.Light")]
+    [Activity(Label = "Crear Denuncia", Theme = "@style/MyTheme")]
     public class CrearDenunciaActivity : Activity
     {
         private Spinner spnTipoNombre;
