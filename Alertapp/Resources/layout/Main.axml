@@ -89,8 +89,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:choiceMode="singleChoice"
-            android:divider="#818181"
-            android:dividerHeight="1dp"
-            android:background="#E3F2FD" />
+            android:background="#FFF" />
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

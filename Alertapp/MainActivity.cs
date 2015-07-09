@@ -34,7 +34,7 @@ namespace Alertapp
         private WebClient cliente;
         public static Dictionary<string, System.Uri> WebServices;
         public static Dictionary<int, float> ColorTipoDenuncia;
-        private List<Denuncia> Denuncias;
+        private List<Denuncia> Denuncias, DenunciasAux;
         private Address address;
         private Marker customMarker;
         Location _currentLocation;
@@ -46,6 +46,8 @@ namespace Alertapp
         private MyActionBarDrawerToggle mDrawerToggle;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
+        private ArrayAdapter mLeftAdapter;
+        private List<string> mLeftDataSet;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -67,8 +69,9 @@ namespace Alertapp
             ibtnReload = FindViewById<ImageButton>(Resource.Id.ibtnReload);
             ibtnGps = FindViewById<ImageButton>(Resource.Id.ibtnGps);
             ibtnSearch = FindViewById<ImageButton>(Resource.Id.ibtnSearch);
-            btnNormal.RequestFocus();
             txtBuscar = FindViewById<EditText>(Resource.Id.txtBuscar);
+            txtBuscar.ClearFocus();
+            btnNormal.RequestFocus();
             btnNormal.Click +=btnNormal_Click;
             btnSatellite.Click +=btnSatellite_Click;
             txtBuscar.EditorAction += txtBuscar_EditorAction;
@@ -81,6 +84,20 @@ namespace Alertapp
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawe_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
             SetSupportActionBar(toolBar);
+
+            mLeftDataSet = new List<string>();
+            mLeftDataSet.Add("Bienvenido Luis Jovel");
+            mLeftDataSet.Add("Filtrar Resultados");
+            mLeftDataSet.Add("     Ver Todos");
+            mLeftDataSet.Add("     Corte de servicio");
+            mLeftDataSet.Add("     Fuga de Agua");
+            mLeftDataSet.Add("     Daño a Infraestructura");
+            mLeftDataSet.Add("     Otros");
+            mLeftDataSet.Add("Cerrar Sesion");
+            mLeftAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mLeftDataSet);
+            mLeftDrawer.ItemClick += mLeftDrawer_ItemClick;
+            mLeftDrawer.Adapter = mLeftAdapter;
+
             mDrawerToggle = new MyActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
@@ -104,6 +121,27 @@ namespace Alertapp
             alert = builder.Create();
         }
 
+        void mLeftDrawer_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            if (e.Position>=2 && e.Position <= 6)
+            {
+                filtrarDenunciasPorTipo(mLeftDrawer.GetItemAtPosition(e.Position).ToString().Trim());
+            }
+        }
+        public void filtrarDenunciasPorTipo(string filtro)
+        {
+            mDrawerLayout.CloseDrawer(mLeftDrawer);
+            DenunciasAux = Denuncias;
+            if (filtro!="Ver Todos")
+            {
+                Denuncias = (from d in Denuncias
+                             where d.nombretipo == filtro
+                             select d).ToList();
+            }
+            mMap.Clear();
+            loadDencunciasMarkers();
+            Denuncias = DenunciasAux;
+        }
         void ibtnGps_Click(object sender, EventArgs e)
         {
             bool isGPSEnabled = _locationManager.IsProviderEnabled(LocationManager.GpsProvider);
@@ -135,6 +173,11 @@ namespace Alertapp
         {
             mDrawerToggle.OnOptionsItemSelected(item);
             return base.OnOptionsItemSelected(item);
+        }
+        public override void OnConfigurationChanged(Android.Content.Res.Configuration newConfig)
+        {
+            base.OnConfigurationChanged(newConfig);
+            mDrawerToggle.OnConfigurationChanged(newConfig); 
         }
         protected override void OnResume()
         {
