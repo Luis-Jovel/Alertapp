@@ -87,6 +87,7 @@ namespace Alertapp
 
             mLeftDataSet = new List<string>();
             mLeftDataSet.Add("Bienvenido Luis Jovel");
+			mLeftDataSet.Add("Listadon de Denuncias");
             mLeftDataSet.Add("Filtrar Resultados");
             mLeftDataSet.Add("     Ver Todos");
             mLeftDataSet.Add("     Corte de servicio");
@@ -123,7 +124,10 @@ namespace Alertapp
 
         void mLeftDrawer_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            if (e.Position>=2 && e.Position <= 6)
+			if (e.Position==1) {
+				StartActivity (typeof(ListadoDenunciasActivity));
+			}
+            if (e.Position>=3 && e.Position <= 7)
             {
                 filtrarDenunciasPorTipo(mLeftDrawer.GetItemAtPosition(e.Position).ToString().Trim());
             }

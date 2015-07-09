@@ -14,6 +14,10 @@ Alertapp.MyActionBarDrawerToggle, Alertapp;md56f37930c7ff998cb67a2bd003cb8b93f.M
 Alertapp.MyActionBarDrawerToggle, Alertapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56f37930c7ff998cb67a2bd003cb8b93f.MyActionBarDrawerToggle
 Alertapp.MyActionBarDrawerToggle;md56f37930c7ff998cb67a2bd003cb8b93f.MyActionBarDrawerToggle
 alertapp.MyActionBarDrawerToggle;md56f37930c7ff998cb67a2bd003cb8b93f.MyActionBarDrawerToggle
+Alertapp.ListadoDenunciasActivity, Alertapp;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
+Alertapp.ListadoDenunciasActivity, Alertapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
+Alertapp.ListadoDenunciasActivity;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
+alertapp.ListadoDenunciasActivity;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor

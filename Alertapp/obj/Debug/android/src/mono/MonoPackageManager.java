@@ -84,6 +84,7 @@ class MonoPackageManager_Resources {
 		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
+		"Xamarin.Android.Support.v7.CardView.dll",
 		"Xamarin.Android.Support.v7.MediaRouter.dll",
 		"Xamarin.GooglePlayServices.Ads.dll",
 		"Xamarin.GooglePlayServices.Analytics.dll",

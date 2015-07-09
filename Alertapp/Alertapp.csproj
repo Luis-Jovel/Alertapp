@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7ADA88D2-2951-46DD-8A29-505E0A785A21}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -18,6 +16,8 @@
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidLinkSkip />
+    <AndroidStoreUncompressedFileExtensions />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,18 +27,12 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <AndroidLinkSkip />
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
-    <BundleAssemblies>False</BundleAssemblies>
-    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
-    <AndroidStoreUncompressedFileExtensions />
-    <MandroidI18n />
+    <MandroidI18n>
+    </MandroidI18n>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <Debugger>Xamarin</Debugger>
-    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -49,127 +43,97 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <AndroidLinkSkip />
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
-    <BundleAssemblies>False</BundleAssemblies>
-    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>
-    <AndroidStoreUncompressedFileExtensions />
-    <MandroidI18n />
+    <MandroidI18n>
+    </MandroidI18n>
     <Debugger>Xamarin</Debugger>
-    <AotAssemblies>False</AotAssemblies>
-    <EnableLLVM>False</EnableLLVM>
-    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
-    <EnableProguard>False</EnableProguard>
     <DevInstrumentationEnabled>False</DevInstrumentationEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GooglePlayServicesLib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.25.0.0.0\lib\MonoAndroid41\GooglePlayServicesLib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="GooglePlayServicesLib, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.25.0.0.0\lib\MonoAndroid41\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.MediaRouter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Ads.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Ads.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Analytics.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Analytics.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.AppIndexing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.AppIndexing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.AppIndexing.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppIndexing.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.AppInvite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.AppInvite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.AppInvite.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppInvite.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.AppState, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.AppState, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.AppState.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppState.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Base.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Cast.25.0.0.0\lib\MonoAndroid42\Xamarin.GooglePlayServices.Cast.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Drive, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Drive, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Drive.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Drive.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Fitness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Fitness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Fitness.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Fitness.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Games.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Games.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Gcm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Gcm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Gcm.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Identity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Identity.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Identity.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Location, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Location, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Location.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Location.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Nearby, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Nearby, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Nearby.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Nearby.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Panorama, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Panorama, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Panorama.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Panorama.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Plus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Plus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Plus.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Plus.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.SafetyNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.SafetyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.SafetyNet.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.SafetyNet.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Wallet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Wallet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Wallet.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Wallet.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Wearable.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Wearable.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +147,7 @@
     <Compile Include="Shared.cs" />
     <Compile Include="TipoDenuncia.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="ListadoDenunciasActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -201,6 +166,10 @@
     <AndroidResource Include="Resources\layout\CrearDenuncia.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListadoDenuncias.axml" />
+    <AndroidResource Include="Resources\drawable\exampleDenuncia1.jpg" />
+    <AndroidResource Include="Resources\drawable\exampleDenuncia2.jpg" />
+    <AndroidResource Include="Resources\drawable\exampleDenuncia3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -218,12 +187,16 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservices">
-      <Visible>False</Visible>
       <Version>25.0.0.0</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="json.net">
-      <Visible>False</Visible>
       <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7cardview">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
