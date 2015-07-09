@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="Alertapp\Alertapp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.015d2bc6715ff40e" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Alertapp\ListadoDenunciasActivity.cs">
+    <Files>
+      <File FileName="Alertapp\ListadoDenunciasActivity.cs" Line="37" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

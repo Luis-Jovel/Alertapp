@@ -1,27 +1,27 @@
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Alertapp.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\GooglePlayServicesLib.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Newtonsoft.Json.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v7.CardView.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v7.MediaRouter.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Ads.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Analytics.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.AppIndexing.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.AppInvite.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.AppState.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Base.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Cast.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Drive.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Fitness.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Games.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Gcm.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Identity.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Location.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Maps.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Nearby.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Panorama.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Plus.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.SafetyNet.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Wallet.dll
-C:\Users\Fjovel\Documents\GitHub\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Wearable.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Alertapp.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\GooglePlayServicesLib.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Newtonsoft.Json.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Ads.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Analytics.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.AppIndexing.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.AppInvite.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.AppState.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Base.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Cast.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Drive.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Fitness.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Games.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Gcm.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Identity.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Location.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Nearby.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Panorama.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Plus.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.SafetyNet.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Wallet.dll
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\assemblies\Xamarin.GooglePlayServices.Wearable.dll
