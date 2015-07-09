@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:padding="25dp">
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvInfoCiudad"
+        android:textColor="#000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvInfoCalle"
+        android:textColor="#000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvInfoPais"
+        android:textColor="#000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Button
+        android:text="Denunciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDenunciar"
+        android:backgroundTint="#000000ff"
+        android:backgroundTintMode="src_over"
+        android:background="#E64A19"
+        android:fadingEdge="none"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp" />
+</LinearLayout>
