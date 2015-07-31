@@ -170,6 +170,7 @@
     <AndroidResource Include="Resources\drawable\exampleDenuncia1.jpg" />
     <AndroidResource Include="Resources\drawable\exampleDenuncia2.jpg" />
     <AndroidResource Include="Resources\drawable\exampleDenuncia3.jpg" />
+    <AndroidResource Include="Resources\layout\CardView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

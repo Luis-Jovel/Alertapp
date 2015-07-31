@@ -1,12 +1,34 @@
 ﻿<Properties StartupItem="Alertapp\Alertapp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.015d2bc6715ff40e" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Alertapp\ListadoDenunciasActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.a" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Alertapp\CrearDenunciaActivity.cs">
     <Files>
-      <File FileName="Alertapp\ListadoDenunciasActivity.cs" Line="37" Column="26" />
+      <File FileName="Alertapp\ListadoDenunciasActivity.cs" Line="37" Column="40" />
+      <File FileName="Alertapp\CrearDenunciaActivity.cs" Line="122" Column="76" />
+      <File FileName="Alertapp\MainActivity.cs" Line="96" Column="50" />
+      <File FileName="Alertapp\Denuncia.cs" Line="27" Column="32" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Alertapp" expanded="True">
+            <Node name="Alertapp" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True">
+                  <Node name="CrearDenuncia.axml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Alertapp AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

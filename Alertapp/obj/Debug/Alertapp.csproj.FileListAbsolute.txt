@@ -94,6 +94,7 @@ C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug
 C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\drawable\exampledenuncia1.jpg
 C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\drawable\exampledenuncia2.jpg
 C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\drawable\exampledenuncia3.jpg
+C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\layout\cardview.xml
 C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\layout\main.xml
 C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\values\strings.xml
 C:\Users\luigi\Documents\Visual Studio 2013\Projects\Alertapp\Alertapp\obj\Debug\res\drawable\icon.png

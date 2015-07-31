@@ -18,13 +18,21 @@ namespace Alertapp
 	public class ListadoDenunciasActivity : Android.Support.V7.App.ActionBarActivity
 	{
 		private CardView card1;
+		private View card2;
+		private LinearLayout layout;
+		private TextView text;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			// Create your application here
 			SetContentView(Resource.Layout.ListadoDenuncias);
+			layout = FindViewById<LinearLayout> (Resource.Id.layout);
 			card1 = FindViewById<CardView>(Resource.Id.card1);
+			text = new TextView (this);
+			text.Text = "generado programaticalmente";
+			card2 = LayoutInflater.From (this).Inflate(Resource.Layout.CardView, layout, false);
+			layout.AddView (card2);
 			card1.Click += (object sender, EventArgs e) => {
 				Denuncia denuncia = new Denuncia();
 				denuncia.iddenuncia = 3;

@@ -31,7 +31,7 @@ namespace Alertapp
         private Button btnNormal, btnSatellite;
         private ImageButton ibtnReload, ibtnGps, ibtnSearch;
         private EditText txtBuscar;
-        private WebClient cliente;
+        private WebClient cliente, clienteUpload;
         public static Dictionary<string, System.Uri> WebServices;
         public static Dictionary<int, float> ColorTipoDenuncia;
         private List<Denuncia> Denuncias, DenunciasAux;
@@ -56,7 +56,8 @@ namespace Alertapp
             SetContentView(Resource.Layout.Main);
             WebServices = new Dictionary<string, System.Uri> {
                 {"getDenuncias",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/getDenuncias")},
-                {"setDenuncia",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/setDenuncia")}
+                {"setDenuncia",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/setDenuncia")},
+				{"getDenunciaPicture",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/getDenunciaPicture")}
             };
             ColorTipoDenuncia = new Dictionary<int, float>{
                 {1, BitmapDescriptorFactory.HueRed},
@@ -161,7 +162,7 @@ namespace Alertapp
             {
                 if (_currentLocation == null)
                 {
-                    alert.SetMessage("No se pudo hubiar la posicion");
+                    alert.SetMessage("No se pudo hubicar la posicion");
                     alert.Show();
                 }
                 else
@@ -352,16 +353,38 @@ namespace Alertapp
         public View GetInfoWindow(Marker marker)
         {
             View view;
+			byte[] image;
             if (marker.Snippet != "customMarker")
             {
                 view = LayoutInflater.Inflate(Resource.Layout.info_window, null, false);
                 var denuncia = (from d in Denuncias
                                 where d.iddenuncia == Convert.ToInt32(marker.Snippet)
                                 select d).ToList()[0];
+				if (denuncia.imagebase64.Length <= 0) {
+					alert.SetMessage("Cargando...");
+					alert.Show();
+					clienteUpload = new WebClient ();
+					NameValueCollection parametros = new NameValueCollection ();
+					parametros.Add ("iddenuncia",denuncia.iddenuncia.ToString());
+					clienteUpload.UploadValuesAsync (WebServices["getDenunciaPicture"],parametros);
+					clienteUpload.UploadValuesCompleted += (object sender, UploadValuesCompletedEventArgs e) => {
+						RunOnUiThread(() =>
+							{
+								denuncia.imagebase64 = Encoding.UTF8.GetString(e.Result);	
+								Console.WriteLine(denuncia.imagebase64);
+								if (denuncia.imagebase64 != null && denuncia.imagebase64 != "")
+								{
+									image = Convert.FromBase64String(denuncia.imagebase64);
+									view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageBitmap(BitmapFactory.DecodeByteArray(image, 0, image.Length));
+									marker.ShowInfoWindow();
+								} 
+								alert.Cancel();
+							});
+					};
+				}
                 view.FindViewById<TextView>(Resource.Id.txtNombre).Text = denuncia.nombretipo;
                 view.FindViewById<TextView>(Resource.Id.txtDireccion).Text = denuncia.ciudad + ", " + denuncia.calle;
                 view.FindViewById<TextView>(Resource.Id.txtNumero).Text = "Por " + denuncia.nombre;
-                byte[] image;
                 if (denuncia.imagebase64 != null && denuncia.imagebase64 != "")
                 {
                     image = Convert.FromBase64String(denuncia.imagebase64);

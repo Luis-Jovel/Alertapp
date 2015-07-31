@@ -44,7 +44,7 @@ namespace Alertapp
                 tipos = new string[]{
                     "Corte de servicio",
                     "Fuga de Agua",
-                    "Da駉 a Infraestructura",
+                    "Daño a Infraestructura",
                     "Otros"
                 };
                 ids = new int[] { 1, 2, 3, 4 };
