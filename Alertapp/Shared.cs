@@ -15,7 +15,8 @@ namespace Alertapp
 {
     public class Shared
     {
-        public static Denuncia denuncia;
+		public static List<Denuncia> denuncias;
+		public static Denuncia denuncia;
         public static Address address;
     }
 }

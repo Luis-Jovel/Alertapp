@@ -88,6 +88,7 @@ namespace Alertapp
         }
         void btnInsertDenuncia_Click(object sender, EventArgs e)
         {
+			Toast.MakeText (this, "Creando denuncia...", ToastLength.Short).Show();
             cliente = new WebClient();
             NameValueCollection parametros = new NameValueCollection();
             parametros.Add("idusuario", "1");

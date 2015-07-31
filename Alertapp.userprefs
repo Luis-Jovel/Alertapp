@@ -1,28 +1,27 @@
 ﻿<Properties StartupItem="Alertapp\Alertapp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.a" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Alertapp\CrearDenunciaActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4GoogleAPI" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Alertapp\ListadoDenunciasActivity.cs">
     <Files>
-      <File FileName="Alertapp\ListadoDenunciasActivity.cs" Line="37" Column="40" />
-      <File FileName="Alertapp\CrearDenunciaActivity.cs" Line="122" Column="76" />
-      <File FileName="Alertapp\MainActivity.cs" Line="96" Column="50" />
-      <File FileName="Alertapp\Denuncia.cs" Line="27" Column="32" />
+      <File FileName="Alertapp\ListadoDenunciasActivity.cs" Line="33" Column="28" />
+      <File FileName="Alertapp\CrearDenunciaActivity.cs" Line="88" Column="10" />
+      <File FileName="Alertapp\MainActivity.cs" Line="362" Column="17" />
+      <File FileName="Alertapp\Denuncia.cs" Line="34" Column="47" />
+      <File FileName="Alertapp\Shared.cs" Line="18" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Alertapp" expanded="True">
             <Node name="Alertapp" expanded="True">
+              <Node name="Assets" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True">
-                  <Node name="CrearDenuncia.axml" selected="True" />
-                </Node>
+                <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True" />
               </Node>
+              <Node name="ListadoDenunciasActivity.cs" selected="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

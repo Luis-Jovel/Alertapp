@@ -126,6 +126,7 @@ namespace Alertapp
         void mLeftDrawer_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
 			if (e.Position==1) {
+				Shared.denuncias = Denuncias;
 				StartActivity (typeof(ListadoDenunciasActivity));
 			}
             if (e.Position>=3 && e.Position <= 7)
@@ -187,7 +188,12 @@ namespace Alertapp
         protected override void OnResume()
         {
             base.OnResume();
-            _locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);
+			try {
+				_locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);	
+			} catch (Exception ex) {
+				
+			}
+
         }
         protected override void OnPause()
         {
@@ -361,8 +367,7 @@ namespace Alertapp
                                 where d.iddenuncia == Convert.ToInt32(marker.Snippet)
                                 select d).ToList()[0];
 				if (denuncia.imagebase64.Length <= 0) {
-					alert.SetMessage("Cargando...");
-					alert.Show();
+					//Toast.MakeText (this, "Cargando...", ToastLength.Short).Show();
 					clienteUpload = new WebClient ();
 					NameValueCollection parametros = new NameValueCollection ();
 					parametros.Add ("iddenuncia",denuncia.iddenuncia.ToString());
@@ -378,7 +383,6 @@ namespace Alertapp
 									view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageBitmap(BitmapFactory.DecodeByteArray(image, 0, image.Length));
 									marker.ShowInfoWindow();
 								} 
-								alert.Cancel();
 							});
 					};
 				}
