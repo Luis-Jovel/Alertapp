@@ -88,7 +88,7 @@ namespace Alertapp
 
             mLeftDataSet = new List<string>();
             mLeftDataSet.Add("Bienvenido Luis Jovel");
-			mLeftDataSet.Add("Listadon de Denuncias");
+			mLeftDataSet.Add("Listado de Denuncias");
             mLeftDataSet.Add("Filtrar Resultados");
             mLeftDataSet.Add("     Ver Todos");
             mLeftDataSet.Add("     Corte de servicio");
@@ -163,7 +163,7 @@ namespace Alertapp
             {
                 if (_currentLocation == null)
                 {
-                    alert.SetMessage("No se pudo hubicar la posicion");
+                    alert.SetMessage("No se pudo ubicar la posicion");
                     alert.Show();
                 }
                 else
