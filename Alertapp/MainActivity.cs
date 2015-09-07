@@ -25,7 +25,7 @@ using Android.Support.V4.Widget;
 namespace Alertapp
 {
     [Activity(Label = "Alertapp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
-    public class MainActivity : ActionBarActivity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter, Android.Gms.Maps.GoogleMap.IOnInfoWindowClickListener, ILocationListener
+    public class MainActivity : ActionBarActivity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter, Android.Gms.Maps.GoogleMap.IOnInfoWindowClickListener/*, ILocationListener*/
     {
         private GoogleMap mMap;
         private Button btnNormal, btnSatellite;
@@ -34,12 +34,14 @@ namespace Alertapp
         private WebClient cliente, clienteUpload;
         public static Dictionary<string, System.Uri> WebServices;
         public static Dictionary<int, float> ColorTipoDenuncia;
+		public static Dictionary<int, int> MarkerTipoDenuncia;
         private List<Denuncia> Denuncias, DenunciasAux;
         private Address address;
         private Marker customMarker;
-        Location _currentLocation;
-        LocationManager _locationManager;
-        String _locationProvider;
+		//GPS OBSOLETO
+//        Location _currentLocation;
+//        LocationManager _locationManager;
+//        String _locationProvider;
         private SupportToolbar toolBar;
         private Android.App.AlertDialog.Builder builder;
         private Android.App.AlertDialog alert;
@@ -59,12 +61,19 @@ namespace Alertapp
                 {"setDenuncia",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/setDenuncia")},
 				{"getDenunciaPicture",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/getDenunciaPicture")}
             };
+			//este diccionario dejo de usarse pero puede resultar util luego
             ColorTipoDenuncia = new Dictionary<int, float>{
                 {1, BitmapDescriptorFactory.HueRed},
                 {2, BitmapDescriptorFactory.HueAzure},
                 {3, BitmapDescriptorFactory.HueGreen},
                 {4, BitmapDescriptorFactory.HueYellow},
             };
+			MarkerTipoDenuncia = new Dictionary<int, int>{
+				{1, Resource.Drawable.corte_marker},
+				{2, Resource.Drawable.fuga_marker},
+				{3, Resource.Drawable.damage_marker},
+				{4, Resource.Drawable.otros_marker}
+			};
             btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
             btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
             ibtnReload = FindViewById<ImageButton>(Resource.Id.ibtnReload);
@@ -112,7 +121,8 @@ namespace Alertapp
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             mDrawerToggle.SyncState();
             SetUpMap();
-            InitializeLocationManager();
+			//GPS OBSOLETO
+//            InitializeLocationManager();
             cliente = new WebClient();
             //llamar a web service
             cliente.DownloadDataAsync(WebServices["getDenuncias"]);
@@ -150,7 +160,8 @@ namespace Alertapp
         }
         void ibtnGps_Click(object sender, EventArgs e)
         {
-            bool isGPSEnabled = _locationManager.IsProviderEnabled(LocationManager.GpsProvider);
+			//GPS OBSOLETO
+            /*bool isGPSEnabled = _locationManager.IsProviderEnabled(LocationManager.GpsProvider);
             ConnectivityManager cm = (ConnectivityManager)GetSystemService(Context.ConnectivityService);
             bool dataConnection = cm.GetAllNetworkInfo() != null;
             int resultCode = GooglePlayServicesUtil.IsGooglePlayServicesAvailable(this);
@@ -173,7 +184,7 @@ namespace Alertapp
                     addCustomMarker(_currentLocation.Latitude, _currentLocation.Longitude);
                     mMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(_currentLocation.Latitude, _currentLocation.Longitude), 10));
                 }
-            }
+            }*/
         }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -185,39 +196,40 @@ namespace Alertapp
             base.OnConfigurationChanged(newConfig);
             mDrawerToggle.OnConfigurationChanged(newConfig); 
         }
-        protected override void OnResume()
-        {
-            base.OnResume();
-			try {
-				_locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);	
-			} catch (Exception ex) {
-				
-			}
-
-        }
-        protected override void OnPause()
-        {
-            base.OnPause();
-            _locationManager.RemoveUpdates(this);
-        }
-        void InitializeLocationManager()
-        {
-            _locationManager = (LocationManager)GetSystemService(LocationService);
-            Criteria criteriaForLocationService = new Criteria
-            {
-                Accuracy = Accuracy.Fine
-            };
-            IList<string> acceptableLocationProviders = _locationManager.GetProviders(criteriaForLocationService, true);
-
-            if (acceptableLocationProviders.Any())
-            {
-                _locationProvider = acceptableLocationProviders.First();
-            }
-            else
-            {
-                _locationProvider = String.Empty;
-            }
-        }
+		//GPS OBSOLETO
+//        protected override void OnResume()
+//        {
+//            base.OnResume();
+//			try {
+//				_locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);	
+//			} catch (Exception ex) {
+//				
+//			}
+//
+//        }
+//        protected override void OnPause()
+//        {
+//            base.OnPause();
+//            _locationManager.RemoveUpdates(this);
+//        }
+//        void InitializeLocationManager()
+//        {
+//            _locationManager = (LocationManager)GetSystemService(LocationService);
+//            Criteria criteriaForLocationService = new Criteria
+//            {
+//                Accuracy = Accuracy.Fine
+//            };
+//            IList<string> acceptableLocationProviders = _locationManager.GetProviders(criteriaForLocationService, true);
+//
+//            if (acceptableLocationProviders.Any())
+//            {
+//                _locationProvider = acceptableLocationProviders.First();
+//            }
+//            else
+//            {
+//                _locationProvider = String.Empty;
+//            }
+//        }
         void ibtnReload_Click(object sender, EventArgs e)
         {
             mMap.Clear();
@@ -442,14 +454,15 @@ namespace Alertapp
                 mMap.AddMarker(new MarkerOptions()
                     .SetPosition(new LatLng(denuncia.lat, denuncia.lng))
                     .SetSnippet(denuncia.iddenuncia.ToString())
-                    .SetIcon(BitmapDescriptorFactory.DefaultMarker(ColorTipoDenuncia[denuncia.idtipo])));
+                    //.SetIcon(BitmapDescriptorFactory.DefaultMarker(ColorTipoDenuncia[denuncia.idtipo])));
+					.SetIcon(BitmapDescriptorFactory.FromResource(MarkerTipoDenuncia[denuncia.idtipo])));
             }
         }
 
-        public void OnLocationChanged(Location location)
-        {
-            _currentLocation = location;
-        }
+//        public void OnLocationChanged(Location location)
+//        {
+//            _currentLocation = location;
+//        }
 
         public void OnProviderDisabled(string provider)
         {

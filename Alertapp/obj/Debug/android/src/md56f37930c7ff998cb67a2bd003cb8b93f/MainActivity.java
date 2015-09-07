@@ -7,8 +7,7 @@ public class MainActivity
 		mono.android.IGCUserPeer,
 		com.google.android.gms.maps.OnMapReadyCallback,
 		com.google.android.gms.maps.GoogleMap.InfoWindowAdapter,
-		com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener,
-		android.location.LocationListener
+		com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener
 {
 	static final String __md_methods;
 	static {
@@ -16,17 +15,11 @@ public class MainActivity
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onConfigurationChanged:(Landroid/content/res/Configuration;)V:GetOnConfigurationChanged_Landroid_content_res_Configuration_Handler\n" +
-			"n_onResume:()V:GetOnResumeHandler\n" +
-			"n_onPause:()V:GetOnPauseHandler\n" +
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"n_onMapReady:(Lcom/google/android/gms/maps/GoogleMap;)V:GetOnMapReady_Lcom_google_android_gms_maps_GoogleMap_Handler:Android.Gms.Maps.IOnMapReadyCallbackInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"n_getInfoContents:(Lcom/google/android/gms/maps/model/Marker;)Landroid/view/View;:GetGetInfoContents_Lcom_google_android_gms_maps_model_Marker_Handler:Android.Gms.Maps.GoogleMap/IInfoWindowAdapterInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"n_getInfoWindow:(Lcom/google/android/gms/maps/model/Marker;)Landroid/view/View;:GetGetInfoWindow_Lcom_google_android_gms_maps_model_Marker_Handler:Android.Gms.Maps.GoogleMap/IInfoWindowAdapterInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"n_onInfoWindowClick:(Lcom/google/android/gms/maps/model/Marker;)V:GetOnInfoWindowClick_Lcom_google_android_gms_maps_model_Marker_Handler:Android.Gms.Maps.GoogleMap/IOnInfoWindowClickListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
-			"n_onLocationChanged:(Landroid/location/Location;)V:GetOnLocationChanged_Landroid_location_Location_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
-			"n_onProviderDisabled:(Ljava/lang/String;)V:GetOnProviderDisabled_Ljava_lang_String_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
-			"n_onProviderEnabled:(Ljava/lang/String;)V:GetOnProviderEnabled_Ljava_lang_String_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
-			"n_onStatusChanged:(Ljava/lang/String;ILandroid/os/Bundle;)V:GetOnStatusChanged_Ljava_lang_String_ILandroid_os_Bundle_Handler:Android.Locations.ILocationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("Alertapp.MainActivity, Alertapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
 	}
@@ -62,22 +55,6 @@ public class MainActivity
 	}
 
 	private native void n_onConfigurationChanged (android.content.res.Configuration p0);
-
-
-	public void onResume ()
-	{
-		n_onResume ();
-	}
-
-	private native void n_onResume ();
-
-
-	public void onPause ()
-	{
-		n_onPause ();
-	}
-
-	private native void n_onPause ();
 
 
 	public void onActivityResult (int p0, int p1, android.content.Intent p2)
@@ -118,38 +95,6 @@ public class MainActivity
 	}
 
 	private native void n_onInfoWindowClick (com.google.android.gms.maps.model.Marker p0);
-
-
-	public void onLocationChanged (android.location.Location p0)
-	{
-		n_onLocationChanged (p0);
-	}
-
-	private native void n_onLocationChanged (android.location.Location p0);
-
-
-	public void onProviderDisabled (java.lang.String p0)
-	{
-		n_onProviderDisabled (p0);
-	}
-
-	private native void n_onProviderDisabled (java.lang.String p0);
-
-
-	public void onProviderEnabled (java.lang.String p0)
-	{
-		n_onProviderEnabled (p0);
-	}
-
-	private native void n_onProviderEnabled (java.lang.String p0);
-
-
-	public void onStatusChanged (java.lang.String p0, int p1, android.os.Bundle p2)
-	{
-		n_onStatusChanged (p0, p1, p2);
-	}
-
-	private native void n_onStatusChanged (java.lang.String p0, int p1, android.os.Bundle p2);
 
 	java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

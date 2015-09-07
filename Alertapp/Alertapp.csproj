@@ -14,7 +14,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -135,6 +135,9 @@
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.6\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CrearDenunciaActivity.cs" />
@@ -171,6 +174,10 @@
     <AndroidResource Include="Resources\drawable\exampleDenuncia2.jpg" />
     <AndroidResource Include="Resources\drawable\exampleDenuncia3.jpg" />
     <AndroidResource Include="Resources\layout\CardView.axml" />
+    <AndroidResource Include="Resources\drawable\corte_marker.png" />
+    <AndroidResource Include="Resources\drawable\damage_marker.png" />
+    <AndroidResource Include="Resources\drawable\fuga_marker.png" />
+    <AndroidResource Include="Resources\drawable\otros_marker.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -197,6 +204,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv7cardview">
       <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.6</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

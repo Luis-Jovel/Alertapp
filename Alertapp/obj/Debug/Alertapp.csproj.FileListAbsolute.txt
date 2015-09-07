@@ -163,3 +163,9 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\values\styles.xm
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\search.png
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\R.cs.flag
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\uploadflags.txt
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\Alertapp.csprojResolveAssemblyReference.cache
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\bin\Debug\Xamarin.Mobile.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\corte_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\damage_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\fuga_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\otros_marker.png

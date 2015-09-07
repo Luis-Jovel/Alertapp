@@ -1,0 +1,27 @@
+﻿<Properties StartupItem="ContactsSample\Contacts Sample.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus7gAPI" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="..\..\..\..\Alertapp\MainActivity.cs" Line="166" Column="50" />
+      <File FileName="..\..\..\..\Alertapp\CrearDenunciaActivity.cs" Line="107" Column="12" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Alertapp" expanded="True">
+            <Node name="Alertapp" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Xamarin.Mobile.Android.Samples" expanded="True">
+            <Node name="MediaPicker Sample" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

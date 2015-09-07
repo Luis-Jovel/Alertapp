@@ -106,6 +106,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.GooglePlayServices.SafetyNet.dll",
 		"Xamarin.GooglePlayServices.Wallet.dll",
 		"Xamarin.GooglePlayServices.Wearable.dll",
+		"Xamarin.Mobile.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

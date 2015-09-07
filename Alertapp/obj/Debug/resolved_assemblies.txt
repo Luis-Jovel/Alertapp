@@ -31,4 +31,5 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Xamar
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Xamarin.GooglePlayServices.SafetyNet.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Xamarin.GooglePlayServices.Wallet.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Xamarin.GooglePlayServices.Wearable.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Xamarin.Mobile.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\System.Runtime.Serialization.dll
