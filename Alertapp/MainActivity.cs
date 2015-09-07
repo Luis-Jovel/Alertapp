@@ -21,6 +21,8 @@ using Android.Gms.Common;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V7.App;
 using Android.Support.V4.Widget;
+using Xamarin.Geolocation;
+using System.Threading.Tasks;
 
 namespace Alertapp
 {
@@ -42,6 +44,8 @@ namespace Alertapp
 //        Location _currentLocation;
 //        LocationManager _locationManager;
 //        String _locationProvider;
+		//GPS NUEVO
+		private Geolocator geolocator;
         private SupportToolbar toolBar;
         private Android.App.AlertDialog.Builder builder;
         private Android.App.AlertDialog alert;
@@ -120,6 +124,8 @@ namespace Alertapp
             SupportActionBar.SetDisplayShowTitleEnabled(true);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             mDrawerToggle.SyncState();
+			//GPS NUEVO
+			setupGPS();
             SetUpMap();
 			//GPS OBSOLETO
 //            InitializeLocationManager();
@@ -158,8 +164,35 @@ namespace Alertapp
             loadDencunciasMarkers();
             Denuncias = DenunciasAux;
         }
+		void setupGPS(){
+			//GPS nuevo
+			this.geolocator = new Geolocator(this){DesiredAccuracy = 50};
+			this.geolocator.PositionError += (object sender, PositionErrorEventArgs e) => {
+				alert.SetMessage("No se pudo ubicar la posicion");
+				alert.Show();
+			};
+//			this.geolocator.PositionChanged += OnPositionChanged;
+		}
         void ibtnGps_Click(object sender, EventArgs e)
         {
+			if (!this.geolocator.IsGeolocationAvailable || !this.geolocator.IsGeolocationEnabled)
+			{
+				alert.SetMessage("Internet o GPS estan desactivados");
+				alert.Show();
+				return;
+			}
+			//GPS NUEVO
+			this.geolocator.GetPositionAsync(timeout: 10000).ContinueWith(t => {
+				Console.WriteLine ("Position Status: {0}", t.Result.Timestamp);
+				Console.WriteLine ("Position Latitude: {0}", t.Result.Latitude);
+				Console.WriteLine ("Position Longitude: {0}", t.Result.Longitude);
+				Geocoder geoCoder = new Geocoder(this);
+				IList<Address> gotAddresses = null;
+				gotAddresses = geoCoder.GetFromLocation(t.Result.Latitude, t.Result.Longitude, 1);
+				this.address = (Address)gotAddresses[0];
+				mMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(t.Result.Latitude, t.Result.Longitude), 16));
+				addCustomMarker(t.Result.Latitude, t.Result.Longitude);
+			}, TaskScheduler.FromCurrentSynchronizationContext());
 			//GPS OBSOLETO
             /*bool isGPSEnabled = _locationManager.IsProviderEnabled(LocationManager.GpsProvider);
             ConnectivityManager cm = (ConnectivityManager)GetSystemService(Context.ConnectivityService);
@@ -255,7 +288,7 @@ namespace Alertapp
                 address = (Address)gotAddresses[0];
                 Console.WriteLine("Country name: {0}\n Extras: {1}\n Feature Name: {2}\n Latitude: {3}\n Localty: {4}\n Longitude: {5}\n Thtoughfare: {6}",
                     address.CountryName, address.Extras, address.FeatureName, address.Latitude, address.Locality, address.Longitude, address.Thoroughfare);
-                mMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(address.Latitude, address.Longitude), 12));
+                mMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(address.Latitude, address.Longitude), 16));
                 txtBuscar.ClearFocus();
                 InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
                 imm.HideSoftInputFromWindow(txtBuscar.WindowToken, 0);
@@ -316,9 +349,23 @@ namespace Alertapp
         public void OnMapReady(GoogleMap googleMap)
         {
             mMap = googleMap;
-            LatLng latlng = new LatLng(13.7310, -89.1610);
-            CameraUpdate marca_camera = CameraUpdateFactory.NewLatLngZoom(latlng, 10);
-            mMap.MoveCamera(marca_camera);
+			double lat = 13.7310;
+			double lng = -89.1610;
+			if (!this.geolocator.IsGeolocationAvailable || !this.geolocator.IsGeolocationEnabled) {
+				alert.SetMessage ("Internet o GPS estan desactivados");
+				alert.Show ();
+				LatLng latlng = new LatLng (lat, lng);
+				CameraUpdate marca_camera = CameraUpdateFactory.NewLatLngZoom (latlng, 12);
+				mMap.MoveCamera (marca_camera);
+			} else {
+				this.geolocator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
+					lat = t.Result.Latitude;
+					lng = t.Result.Longitude;
+					LatLng latlng = new LatLng (lat, lng);
+					CameraUpdate marca_camera = CameraUpdateFactory.NewLatLngZoom (latlng, 12);
+					mMap.MoveCamera (marca_camera);
+				}, TaskScheduler.FromCurrentSynchronizationContext ());
+			}
             //MarkerOptions marca = new MarkerOptions()
             //    .SetPosition(latlng)
             //    .SetTitle("El Salvador")

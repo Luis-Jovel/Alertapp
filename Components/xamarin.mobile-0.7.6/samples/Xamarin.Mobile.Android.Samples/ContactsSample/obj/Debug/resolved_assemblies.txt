@@ -1,0 +1,8 @@
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\ContactsSample.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\Mono.Android.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\mscorlib.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\System.Core.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\System.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\System.Xml.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\System.Xml.Linq.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\assemblies\Xamarin.Mobile.dll

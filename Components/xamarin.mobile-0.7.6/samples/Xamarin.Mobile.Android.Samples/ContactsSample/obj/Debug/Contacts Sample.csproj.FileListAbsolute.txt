@@ -1,0 +1,15 @@
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\bin\Debug\ContactsSample.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\bin\Debug\ContactsSample.pdb
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\bin\Debug\ContactsSample.ContactsSample.apk
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\bin\Debug\ContactsSample.ContactsSample-Signed.apk
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\bin\Debug\Xamarin.Mobile.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\Contacts Sample.csprojResolveAssemblyReference.cache
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\ContactsSample.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\ContactsSample.pdb
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\android\bin\ContactsSample.ContactsSample.apk
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\res\layout\list_item.xml
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\res\layout\contact_view.xml
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\res\values\strings.xml
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\res\drawable\icon.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\R.cs.flag
+C:\Users\luigi\Documents\GitHub\Alertapp\Components\xamarin.mobile-0.7.6\samples\Xamarin.Mobile.Android.Samples\ContactsSample\obj\Debug\uploadflags.txt

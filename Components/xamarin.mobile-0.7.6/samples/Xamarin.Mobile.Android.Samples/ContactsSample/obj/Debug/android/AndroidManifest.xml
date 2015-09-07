@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" android:versionCode="1" android:versionName="1.0" package="ContactsSample.ContactsSample">
+  <application android:name="mono.android.app.Application" android:debuggable="true">
+    <activity android:icon="@drawable/icon" android:label="ContactsSample" android:name="md57e607ab9e4d9e472cb7ca653a088d0fb.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="ContactActivity" android:name="md57e607ab9e4d9e472cb7ca653a088d0fb.ContactActivity" />
+    <activity android:name="md50575d4ab16fc336ade1879255cf984b5.MediaPickerActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="ContactsSample.ContactsSample.mono.MonoRuntimeProvider.__mono_init__" />
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.ContactsSample.ContactsSample" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <uses-sdk android:minSdkVersion="7" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+</manifest>
