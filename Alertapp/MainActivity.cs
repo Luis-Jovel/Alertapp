@@ -23,7 +23,7 @@ using Android.Support.V7.App;
 using Android.Support.V4.Widget;
 using Xamarin.Geolocation;
 using System.Threading.Tasks;
-
+using Parse;
 namespace Alertapp
 {
     [Activity(Label = "Alertapp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
@@ -54,10 +54,18 @@ namespace Alertapp
         private ListView mLeftDrawer;
         private ArrayAdapter mLeftAdapter;
         private List<string> mLeftDataSet;
+		async void example(){
+			ParseObject gameScore = new ParseObject("GameScore");
+			gameScore["score"] = 1337;
+			gameScore["playerName"] = "Sean Plott";
+			await gameScore.SaveAsync();
+		}
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+			ParseClient.Initialize("LNAuxom26NKczyL2hfU3deDyFvxkR9vAEVt3NYom",
+				"pTK01DCWyIlw3DQJludWbtnBgvpe2PqNFKa8aDmm");
+			example ();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             WebServices = new Dictionary<string, System.Uri> {
@@ -320,13 +328,18 @@ namespace Alertapp
         }
         void cliente_DownloadDataCompleted(object sender, DownloadDataCompletedEventArgs e)
         {
-            RunOnUiThread(() =>
+			try {
+            	RunOnUiThread(() =>
                 {
                     string json = Encoding.UTF8.GetString(e.Result);
                     Console.WriteLine(json);
                     Denuncias = JsonConvert.DeserializeObject<List<Denuncia>>(json);
                     loadDencunciasMarkers();
                 });
+			} catch (Exception ex) {
+				alert.SetMessage ("Ocurrió un error al descargar los datos");
+				alert.Show ();
+			}
         }
 
         private void btnSatellite_Click(object sender, EventArgs e)

@@ -138,6 +138,9 @@
     <Reference Include="Xamarin.Mobile">
       <HintPath>..\Components\xamarin.mobile-0.7.6\lib\android\Xamarin.Mobile.dll</HintPath>
     </Reference>
+    <Reference Include="Parse.Android">
+      <HintPath>..\Components\parse-1.6.0\lib\android\Parse.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CrearDenunciaActivity.cs" />
@@ -208,6 +211,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamarin.mobile">
       <Version>0.7.6</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="parse">
+      <Version>1.6.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

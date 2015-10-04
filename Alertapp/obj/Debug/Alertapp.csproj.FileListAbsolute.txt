@@ -169,3 +169,5 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\corte_m
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\damage_marker.png
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\fuga_marker.png
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\res\drawable\otros_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\bin\Debug\Parse.Android.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\bin\Debug\Parse.Android.xml

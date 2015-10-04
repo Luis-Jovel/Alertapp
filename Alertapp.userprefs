@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Alertapp\Alertapp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus7gAPI" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\MainActivity.cs">
     <Files>
-      <File FileName="Alertapp\MainActivity.cs" Line="166" Column="50" />
-      <File FileName="Alertapp\CrearDenunciaActivity.cs" Line="107" Column="12" />
+      <File FileName="Alertapp\CrearDenunciaActivity.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\MainActivity.cs" Line="60" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,10 +11,8 @@
           <Node name="Alertapp" expanded="True">
             <Node name="Alertapp" expanded="True">
               <Node name="ComponentReferenceFolder" expanded="True" />
+              <Node name="MainActivity.cs" selected="True" />
             </Node>
-          </Node>
-          <Node name="Xamarin.Mobile.Android.Samples" expanded="True">
-            <Node name="MediaPicker Sample" selected="True" />
           </Node>
         </State>
       </Pad>

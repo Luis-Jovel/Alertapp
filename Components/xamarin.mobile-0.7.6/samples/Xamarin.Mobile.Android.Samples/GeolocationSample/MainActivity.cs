@@ -4,6 +4,7 @@ using Android.Widget;
 using Android.OS;
 using System.Threading;
 using Xamarin.Geolocation;
+using Parse;
 
 namespace GeolocationSample
 {
@@ -14,11 +15,17 @@ namespace GeolocationSample
 		
 		private TextView	positionStatus, positionLatitude, positionLongitude, positionAccuracy,
 							listenStatus, listenLatitude, listenLongitude, listenAccuracy;
-		
+		async void example (){
+			var testObject = new ParseObject ("TestObject");
+			testObject ["foo"] = "bar";
+			await testObject.SaveAsync ();
+		}
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
+			ParseClient.Initialize("LNAuxom26NKczyL2hfU3deDyFvxkR9vAEVt3NYom",
+				"pTK01DCWyIlw3DQJludWbtnBgvpe2PqNFKa8aDmm");
+			example ();
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 

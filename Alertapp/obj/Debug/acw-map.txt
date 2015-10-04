@@ -18,6 +18,14 @@ Alertapp.ListadoDenunciasActivity, Alertapp;md56f37930c7ff998cb67a2bd003cb8b93f.
 Alertapp.ListadoDenunciasActivity, Alertapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
 Alertapp.ListadoDenunciasActivity;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
 alertapp.ListadoDenunciasActivity;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
+Parse.ParsePushBroadcastReceiver, Parse.Android;parse.ParsePushBroadcastReceiver
+Parse.ParsePushBroadcastReceiver, Parse.Android, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null;parse.ParsePushBroadcastReceiver
+Parse.ParsePushBroadcastReceiver;parse.ParsePushBroadcastReceiver
+parse.ParsePushBroadcastReceiver;parse.ParsePushBroadcastReceiver
+Parse.ParsePushService, Parse.Android;parse.ParsePushService
+Parse.ParsePushService, Parse.Android, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null;parse.ParsePushService
+Parse.ParsePushService;parse.ParsePushService
+parse.ParsePushService;parse.ParsePushService
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor

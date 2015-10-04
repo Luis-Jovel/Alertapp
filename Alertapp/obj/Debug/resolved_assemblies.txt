@@ -3,6 +3,7 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Googl
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Mono.Android.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\mscorlib.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\Parse.Android.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\System.Core.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\System.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Debug\android\assets\System.Xml.dll

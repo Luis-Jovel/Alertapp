@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="ContactsSample\Contacts Sample.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus7gAPI" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.015d2bc6715ff40e" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GeolocationSample\MainActivity.cs">
     <Files>
-      <File FileName="..\..\..\..\Alertapp\MainActivity.cs" Line="166" Column="50" />
-      <File FileName="..\..\..\..\Alertapp\CrearDenunciaActivity.cs" Line="107" Column="12" />
+      <File FileName="..\..\..\..\Alertapp\CrearDenunciaActivity.cs" Line="17" Column="21" />
+      <File FileName="GeolocationSample\MainActivity.cs" Line="66" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,10 +11,15 @@
           <Node name="Alertapp" expanded="True">
             <Node name="Alertapp" expanded="True">
               <Node name="ComponentReferenceFolder" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
             </Node>
           </Node>
           <Node name="Xamarin.Mobile.Android.Samples" expanded="True">
-            <Node name="MediaPicker Sample" selected="True" />
+            <Node name="Geolocation Sample" expanded="True">
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
