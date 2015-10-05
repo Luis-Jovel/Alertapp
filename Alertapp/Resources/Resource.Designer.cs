@@ -3471,6 +3471,9 @@ namespace Alertapp
 			// aapt resource value: 0x7f090099
 			public const int default_control_frame = 2131296409;
 			
+			// aapt resource value: 0x7f090084
+			public const int denuncia_miniatura = 2131296388;
+			
 			// aapt resource value: 0x7f090033
 			public const int dialog = 2131296307;
 			
@@ -3539,9 +3542,6 @@ namespace Alertapp
 			
 			// aapt resource value: 0x7f09003f
 			public const int image = 2131296319;
-			
-			// aapt resource value: 0x7f090084
-			public const int imageView1 = 2131296388;
 			
 			// aapt resource value: 0x7f09007f
 			public const int imgFoto = 2131296383;

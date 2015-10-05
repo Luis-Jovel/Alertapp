@@ -167,20 +167,30 @@ namespace Alertapp
         void cliente_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
         {
             RunOnUiThread(() => {
-                string json = Encoding.UTF8.GetString(e.Result);
-                if (json != "error")
-                {
-                    Intent intent = new Intent(this, typeof(MainActivity));
-                    intent.PutExtra("denuncia", json);
-                    SetResult(Result.Ok, intent);
-                    Finish();
-                }
-                else
-                {
-                    alert.SetMessage("Error durante la creacion de denuncia, intentalo denuevo");
-                    alert.Show();
-                }
-                
+				try {
+					string json = Encoding.UTF8.GetString(e.Result);
+					//borrar datos de prueba de 000webhost
+					json = json.Replace("<!-- Hosting24 Analytics Code -->","");
+					json = json.Replace("<script type=\"text/javascript\" src=\"http://stats.hosting24.com/count.php\"></script>","");
+					json = json.Replace("<!-- End Of Analytics Code -->","");
+					json = json.Replace("\n","");
+					json = json.Replace("\t","");
+					if (json != "error")
+					{
+						Intent intent = new Intent(this, typeof(MainActivity));
+						intent.PutExtra("denuncia", json);
+						SetResult(Result.Ok, intent);
+						Finish();
+					}
+					else
+					{
+						alert.SetMessage("Error durante la creacion de denuncia, intentalo denuevo");
+						alert.Show();
+					}	
+				} catch (Exception ex) {
+					alert.SetMessage("Error durante la creacion de denuncia, intentalo denuevo");
+					alert.Show();
+				}
             });
         }
 

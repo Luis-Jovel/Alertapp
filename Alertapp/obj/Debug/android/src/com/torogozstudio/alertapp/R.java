@@ -2220,6 +2220,7 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f090055;
         public static final int default_activity_button=0x7f090040;
         public static final int default_control_frame=0x7f090099;
+        public static final int denuncia_miniatura=0x7f090084;
         public static final int dialog=0x7f090033;
         public static final int disableHome=0x7f090025;
         public static final int disconnect=0x7f0900a1;
@@ -2243,7 +2244,6 @@ containing a value of this type.
         public static final int icon=0x7f090042;
         public static final int ifRoom=0x7f090030;
         public static final int image=0x7f09003f;
-        public static final int imageView1=0x7f090084;
         public static final int imgFoto=0x7f09007f;
         public static final int imgInsertFoto=0x7f090074;
         public static final int info=0x7f0900ae;

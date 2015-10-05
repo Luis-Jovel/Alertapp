@@ -23,7 +23,7 @@ using Android.Support.V7.App;
 using Android.Support.V4.Widget;
 using Xamarin.Geolocation;
 using System.Threading.Tasks;
-using Parse;
+//using Parse;
 namespace Alertapp
 {
     [Activity(Label = "Alertapp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
@@ -54,24 +54,24 @@ namespace Alertapp
         private ListView mLeftDrawer;
         private ArrayAdapter mLeftAdapter;
         private List<string> mLeftDataSet;
-		async void example(){
-			ParseObject gameScore = new ParseObject("GameScore");
-			gameScore["score"] = 1337;
-			gameScore["playerName"] = "Sean Plott";
-			await gameScore.SaveAsync();
-		}
+//		async void example(){
+//			ParseObject gameScore = new ParseObject("GameScore");
+//			gameScore["score"] = 1337;
+//			gameScore["playerName"] = "Sean Plott";
+//			await gameScore.SaveAsync();
+//		}
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-			ParseClient.Initialize("LNAuxom26NKczyL2hfU3deDyFvxkR9vAEVt3NYom",
-				"pTK01DCWyIlw3DQJludWbtnBgvpe2PqNFKa8aDmm");
-			example ();
+//			ParseClient.Initialize("LNAuxom26NKczyL2hfU3deDyFvxkR9vAEVt3NYom",
+//				"pTK01DCWyIlw3DQJludWbtnBgvpe2PqNFKa8aDmm");
+			//example ();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             WebServices = new Dictionary<string, System.Uri> {
-                {"getDenuncias",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/getDenuncias")},
-                {"setDenuncia",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/setDenuncia")},
-				{"getDenunciaPicture",new System.Uri("http://circuloexportador.com/demo/alertapp/index.php/mobile/getDenunciaPicture")}
+				{"getDenuncias",new System.Uri("http://alertapp.uphero.com/index.php/Mobile/getDenuncias")},
+				{"setDenuncia",new System.Uri("http://alertapp.uphero.com/index.php/Mobile/setDenuncia")},
+				{"getDenunciaPicture",new System.Uri("http://alertapp.uphero.com/index.php/Mobile/getDenunciaPicture")}
             };
 			//este diccionario dejo de usarse pero puede resultar util luego
             ColorTipoDenuncia = new Dictionary<int, float>{
@@ -198,6 +198,8 @@ namespace Alertapp
 				IList<Address> gotAddresses = null;
 				gotAddresses = geoCoder.GetFromLocation(t.Result.Latitude, t.Result.Longitude, 1);
 				this.address = (Address)gotAddresses[0];
+				this.address.Latitude = t.Result.Latitude;
+				this.address.Longitude = t.Result.Longitude;
 				mMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(t.Result.Latitude, t.Result.Longitude), 16));
 				addCustomMarker(t.Result.Latitude, t.Result.Longitude);
 			}, TaskScheduler.FromCurrentSynchronizationContext());
@@ -331,12 +333,18 @@ namespace Alertapp
 			try {
             	RunOnUiThread(() =>
                 {
+						
                     string json = Encoding.UTF8.GetString(e.Result);
+						//eliminar datos basura generados por 000webhost
+					json = json.Replace("<!-- Hosting24 Analytics Code -->","");
+					json = json.Replace("<script type=\"text/javascript\" src=\"http://stats.hosting24.com/count.php\"></script>","");
+					json = json.Replace("<!-- End Of Analytics Code -->","");
                     Console.WriteLine(json);
                     Denuncias = JsonConvert.DeserializeObject<List<Denuncia>>(json);
                     loadDencunciasMarkers();
                 });
 			} catch (Exception ex) {
+				Console.WriteLine (ex.ToString());
 				alert.SetMessage ("Ocurrió un error al descargar los datos");
 				alert.Show ();
 			}
@@ -393,14 +401,7 @@ namespace Alertapp
 
         void mMap_MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)
         {
-            Geocoder geoCoder = new Geocoder(this);
-            IList<Address> gotAddresses = null;
-            gotAddresses = geoCoder.GetFromLocation(e.Marker.Position.Latitude, e.Marker.Position.Longitude,1);
-            if (gotAddresses.Count > 0)
-            {
-                address = (Address)gotAddresses[0];
-                e.Marker.ShowInfoWindow();
-            }
+            
         }
 
         private void mMap_MarkerClick(object sender, GoogleMap.MarkerClickEventArgs e)
@@ -419,8 +420,14 @@ namespace Alertapp
 
         private void mMap_MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)
         {
-            LatLng position = e.Marker.Position;
-            Console.WriteLine(position.ToString());
+			Geocoder geoCoder = new Geocoder(this);
+			IList<Address> gotAddresses = null;
+			gotAddresses = geoCoder.GetFromLocation(e.Marker.Position.Latitude, e.Marker.Position.Longitude,1);
+			if (gotAddresses.Count > 0)
+			{
+				address = (Address)gotAddresses[0];
+				e.Marker.ShowInfoWindow();
+			}
         }
 
         public View GetInfoContents(Marker marker)
@@ -447,25 +454,32 @@ namespace Alertapp
 					clienteUpload.UploadValuesCompleted += (object sender, UploadValuesCompletedEventArgs e) => {
 						RunOnUiThread(() =>
 							{
-								denuncia.imagebase64 = Encoding.UTF8.GetString(e.Result);	
+								string result = Encoding.UTF8.GetString(e.Result);
+								//eliminando datos basura de 000webhost
+								result = result.Replace("<!-- Hosting24 Analytics Code -->","");
+								result = result.Replace("<script type=\"text/javascript\" src=\"http://stats.hosting24.com/count.php\"></script>","");
+								result = result.Replace("<!-- End Of Analytics Code -->","");
+								result = result.Replace("\n","");
+								result = result.Replace("\t","");
+								result = result.Trim();
+								denuncia.imagebase64 = result;	
 								Console.WriteLine(denuncia.imagebase64);
-								if (denuncia.imagebase64 != null && denuncia.imagebase64 != "")
+								if (denuncia.imagebase64 != null && denuncia.imagebase64 != "" && denuncia.imagebase64.Length > 0)
 								{
 									image = Convert.FromBase64String(denuncia.imagebase64);
-									view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageBitmap(BitmapFactory.DecodeByteArray(image, 0, image.Length));
+									view.FindViewById<ImageView>(Resource.Id.denuncia_miniatura).SetImageBitmap(BitmapFactory.DecodeByteArray(image, 0, image.Length));
 									marker.ShowInfoWindow();
-								} 
+								}
 							});
 					};
 				}
                 view.FindViewById<TextView>(Resource.Id.txtNombre).Text = denuncia.nombretipo;
                 view.FindViewById<TextView>(Resource.Id.txtDireccion).Text = denuncia.ciudad + ", " + denuncia.calle;
                 view.FindViewById<TextView>(Resource.Id.txtNumero).Text = "Por " + denuncia.nombre;
-                if (denuncia.imagebase64 != null && denuncia.imagebase64 != "")
-                {
-                    image = Convert.FromBase64String(denuncia.imagebase64);
-                    view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageBitmap(BitmapFactory.DecodeByteArray(image, 0, image.Length));
-                }    
+				if (denuncia.imagebase64 != null && denuncia.imagebase64 != "" && denuncia.imagebase64.Length > 0) {
+					image = Convert.FromBase64String (denuncia.imagebase64);
+					view.FindViewById<ImageView> (Resource.Id.denuncia_miniatura).SetImageBitmap (BitmapFactory.DecodeByteArray (image, 0, image.Length));
+				}
             }
             else
             {

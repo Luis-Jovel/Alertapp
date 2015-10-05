@@ -8,7 +8,7 @@
     android:background="#E2E2E2">
     <ImageView
         android:layout_height="200dp"
-        android:id="@+id/imageView1"
+        android:id="@+id/denuncia_miniatura"
         android:layout_weight="50"
         android:src="@drawable/icon"
         android:scaleType="centerCrop"

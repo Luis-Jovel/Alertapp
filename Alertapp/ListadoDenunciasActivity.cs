@@ -44,12 +44,25 @@ namespace Alertapp
 					parametros.Add ("iddenuncia", denuncia.iddenuncia.ToString ());
 					clienteUpload.UploadValuesAsync (MainActivity.WebServices ["getDenunciaPicture"], parametros);
 					clienteUpload.UploadValuesCompleted += (object sender, UploadValuesCompletedEventArgs e) => {
-						denuncia.imagebase64 = Encoding.UTF8.GetString (e.Result);	
-						Console.WriteLine (denuncia.imagebase64);
-						if (denuncia.imagebase64 != null && denuncia.imagebase64 != "") {
-							image = Convert.FromBase64String (denuncia.imagebase64);
-							cardview.FindViewById<ImageView> (Resource.Id.Picture).SetImageBitmap (BitmapFactory.DecodeByteArray (image, 0, image.Length));
-						} 
+						RunOnUiThread(() =>
+							{
+								string result = Encoding.UTF8.GetString(e.Result);
+								//eliminando datos basura de 000webhost
+								result = result.Replace("<!-- Hosting24 Analytics Code -->","");
+								result = result.Replace("<script type=\"text/javascript\" src=\"http://stats.hosting24.com/count.php\"></script>","");
+								result = result.Replace("<!-- End Of Analytics Code -->","");
+								result = result.Replace("\n","");
+								result = result.Replace("\t","");
+								result = result.Trim();
+								denuncia.imagebase64 = result;	
+								Console.WriteLine(denuncia.imagebase64);
+								if (denuncia.imagebase64 != null && denuncia.imagebase64 != "" && denuncia.imagebase64.Length > 0)
+								{
+									image = Convert.FromBase64String(denuncia.imagebase64);
+									image = Convert.FromBase64String (denuncia.imagebase64);
+									cardview.FindViewById<ImageView> (Resource.Id.Picture).SetImageBitmap (BitmapFactory.DecodeByteArray (image, 0, image.Length));
+								}
+							});
 					};
 				} else {
 					image = Convert.FromBase64String (denuncia.imagebase64);
