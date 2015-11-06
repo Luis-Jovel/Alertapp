@@ -3,6 +3,7 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Goo
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Mono.Android.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\mscorlib.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Newtonsoft.Json.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Parse.Android.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\System.Core.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\System.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Xamarin.Android.Support.v4.dll
@@ -29,4 +30,5 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Xam
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Xamarin.GooglePlayServices.SafetyNet.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Xamarin.GooglePlayServices.Wallet.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Xamarin.GooglePlayServices.Wearable.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\Xamarin.Mobile.dll
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\android\assets\System.Runtime.Serialization.dll

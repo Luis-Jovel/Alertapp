@@ -68,10 +68,11 @@ namespace Alertapp
 			//example ();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+			string Dominio_webservice = "http://alertapp-jovel.rhcloud.com/index.php/Mobile";
             WebServices = new Dictionary<string, System.Uri> {
-				{"getDenuncias",new System.Uri("http://alertapp.uphero.com/index.php/Mobile/getDenuncias")},
-				{"setDenuncia",new System.Uri("http://alertapp.uphero.com/index.php/Mobile/setDenuncia")},
-				{"getDenunciaPicture",new System.Uri("http://alertapp.uphero.com/index.php/Mobile/getDenunciaPicture")}
+				{"getDenuncias",new System.Uri(Dominio_webservice+"/getDenuncias")},
+				{"setDenuncia",new System.Uri(Dominio_webservice+"/setDenuncia")},
+				{"getDenunciaPicture",new System.Uri(Dominio_webservice+"/getDenunciaPicture")}
             };
 			//este diccionario dejo de usarse pero puede resultar util luego
             ColorTipoDenuncia = new Dictionary<int, float>{

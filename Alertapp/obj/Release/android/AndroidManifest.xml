@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.torogozstudio.alertapp" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-  <uses-sdk android:targetSdkVersion="21" android:minSdkVersion="18" />
+  <uses-sdk android:targetSdkVersion="22" android:minSdkVersion="18" />
   <application android:label="Alertapp" android:icon="@drawable/icon" android:name="mono.android.app.Application">
     <!--android:theme="@android:style/Theme.Holo.Light"-->
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -15,6 +15,7 @@
       </intent-filter>
     </activity>
     <activity android:label="ListadoDenunciasActivity" android:theme="@style/MyTheme" android:name="md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity" />
+    <activity android:name="md50575d4ab16fc336ade1879255cf984b5.MediaPickerActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.torogozstudio.alertapp.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

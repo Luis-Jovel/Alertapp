@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.torogozstudio.alertapp" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-	<uses-sdk android:targetSdkVersion="21" android:minSdkVersion="18" />
+	<uses-sdk android:targetSdkVersion="22" android:minSdkVersion="18" />
 	<application android:label="Alertapp" android:icon="@drawable/Icon">
 		<!--android:theme="@android:style/Theme.Holo.Light"-->
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />

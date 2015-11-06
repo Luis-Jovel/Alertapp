@@ -109,3 +109,10 @@ C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\res\drawable\searc
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\R.cs.flag
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\uploadflags.txt
 C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\Alertapp.csprojResolveAssemblyReference.cache
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\bin\Release\Parse.Android.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\bin\Release\Xamarin.Mobile.dll
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\bin\Release\Parse.Android.xml
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\res\drawable\corte_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\res\drawable\damage_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\res\drawable\fuga_marker.png
+C:\Users\luigi\Documents\GitHub\Alertapp\Alertapp\obj\Release\res\drawable\otros_marker.png

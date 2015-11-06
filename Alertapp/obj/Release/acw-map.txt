@@ -18,6 +18,14 @@ Alertapp.ListadoDenunciasActivity, Alertapp;md56f37930c7ff998cb67a2bd003cb8b93f.
 Alertapp.ListadoDenunciasActivity, Alertapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
 Alertapp.ListadoDenunciasActivity;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
 alertapp.ListadoDenunciasActivity;md56f37930c7ff998cb67a2bd003cb8b93f.ListadoDenunciasActivity
+Parse.ParsePushBroadcastReceiver, Parse.Android;parse.ParsePushBroadcastReceiver
+Parse.ParsePushBroadcastReceiver, Parse.Android, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null;parse.ParsePushBroadcastReceiver
+Parse.ParsePushBroadcastReceiver;parse.ParsePushBroadcastReceiver
+parse.ParsePushBroadcastReceiver;parse.ParsePushBroadcastReceiver
+Parse.ParsePushService, Parse.Android;parse.ParsePushService
+Parse.ParsePushService, Parse.Android, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null;parse.ParsePushService
+Parse.ParsePushService;parse.ParsePushService
+parse.ParsePushService;parse.ParsePushService
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
@@ -414,3 +422,19 @@ Android.Gms.Wearable.INodeApiNodeListenerImplementor, Xamarin.GooglePlayServices
 Android.Gms.Wearable.INodeApiNodeListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor
 Android.Gms.Wearable.INodeApiNodeListenerImplementor;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor
 android.gms.wearable.INodeApiNodeListenerImplementor;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor
+Xamarin.AsyncQuery`1, Xamarin.Mobile;md5ec31a990cf5451cf96df51948e17f720.AsyncQuery_1
+Xamarin.AsyncQuery`1, Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, PublicKeyToken=null;md5ec31a990cf5451cf96df51948e17f720.AsyncQuery_1
+Xamarin.AsyncQuery`1;md5ec31a990cf5451cf96df51948e17f720.AsyncQuery_1
+xamarin.AsyncQuery_1;md5ec31a990cf5451cf96df51948e17f720.AsyncQuery_1
+Xamarin.Geolocation.GeolocationContinuousListener, Xamarin.Mobile;md523429f28dd02a990195829ee70069e82.GeolocationContinuousListener
+Xamarin.Geolocation.GeolocationContinuousListener, Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, PublicKeyToken=null;md523429f28dd02a990195829ee70069e82.GeolocationContinuousListener
+Xamarin.Geolocation.GeolocationContinuousListener;md523429f28dd02a990195829ee70069e82.GeolocationContinuousListener
+xamarin.geolocation.GeolocationContinuousListener;md523429f28dd02a990195829ee70069e82.GeolocationContinuousListener
+Xamarin.Geolocation.GeolocationSingleListener, Xamarin.Mobile;md523429f28dd02a990195829ee70069e82.GeolocationSingleListener
+Xamarin.Geolocation.GeolocationSingleListener, Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, PublicKeyToken=null;md523429f28dd02a990195829ee70069e82.GeolocationSingleListener
+Xamarin.Geolocation.GeolocationSingleListener;md523429f28dd02a990195829ee70069e82.GeolocationSingleListener
+xamarin.geolocation.GeolocationSingleListener;md523429f28dd02a990195829ee70069e82.GeolocationSingleListener
+Xamarin.Media.MediaPickerActivity, Xamarin.Mobile;md50575d4ab16fc336ade1879255cf984b5.MediaPickerActivity
+Xamarin.Media.MediaPickerActivity, Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, PublicKeyToken=null;md50575d4ab16fc336ade1879255cf984b5.MediaPickerActivity
+Xamarin.Media.MediaPickerActivity;md50575d4ab16fc336ade1879255cf984b5.MediaPickerActivity
+xamarin.media.MediaPickerActivity;md50575d4ab16fc336ade1879255cf984b5.MediaPickerActivity
